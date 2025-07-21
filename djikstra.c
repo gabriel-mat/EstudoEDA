@@ -1,7 +1,7 @@
 #include <limits.h>
 #include <stdlib.h>
 
-void dijkstra(grafo* g, int origem, int distancias[]) {
+int *dijkstra(grafo* g, int origem, int distancias[]) {
     fila f;
     incializa_fila(&f);
     
@@ -18,7 +18,7 @@ void dijkstra(grafo* g, int origem, int distancias[]) {
 
         if (processado[min])
             continue;
-        
+
         processado[min] = 1;
 
         for (link n = g->adj[min]; n != NULL; n = n->next) {
@@ -28,4 +28,6 @@ void dijkstra(grafo* g, int origem, int distancias[]) {
             }
         }
     }
+
+    return distancias;
 }
