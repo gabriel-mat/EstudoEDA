@@ -1,13 +1,13 @@
 #include <stdlib.h>
 #include <limits.h>
 
-int *prim_jarnik(grafo* g){
+int *prim_jarnik(grafo* g, int origem){
     fila f;
     int *keys = (int *)malloc(g->V * sizeof(int));
     int *visitados = (int *)calloc(g->V, sizeof(int));
 
-    for (int i = 0; i < g->num_vertices; i++)
-        chaves[i] = INT_MAX;
+    for (int i = 0; i < g->V; i++)
+        keys[i] = INT_MAX;
 
     inserir_fila(&fila, origem, 0);
     keys[origem] = 0;
