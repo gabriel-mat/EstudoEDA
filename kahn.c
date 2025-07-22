@@ -30,5 +30,12 @@ int *kahn(grafo *g){
         }
     }
 
+    free(graus);
+
+    if(counter < g->V){
+        free(ordem);
+        return NULL;
+    }
+
     return ordem;
 }
