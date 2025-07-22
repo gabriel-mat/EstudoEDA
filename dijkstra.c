@@ -29,5 +29,6 @@ int *dijkstra(grafo* g, int origem, int distancias[]) {
         }
     }
 
+    free(processado);
     return distancias;
 }

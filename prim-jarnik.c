@@ -24,5 +24,6 @@ int *prim_jarnik(grafo* g, int origem){
         }
     }
 
+    free(visitados);
     return keys;
 }
