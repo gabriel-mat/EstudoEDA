@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int *kahm(grafo *g){
+int *kahn(grafo *g){
     int u, counter;
     int *graus = (int *)calloc(g->V , sizeof(int));
     int *ordem = (int *)malloc(g->V * sizeof(int));
